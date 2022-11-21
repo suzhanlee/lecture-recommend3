@@ -1,9 +1,11 @@
 package suchan.lecturerecommend.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import suchan.lecturerecommend.entity.MemberEntity;
+import org.springframework.stereotype.Repository;
+import suchan.lecturerecommend.entity.Member;
 
-public interface MemberRepository extends JpaRepository<MemberEntity, Long> {
+public interface MemberRepository extends JpaRepository<Member, Long> {
 
 
+    boolean existsByName(String name);
 }
